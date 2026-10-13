@@ -2,3 +2,29 @@
 
 /* Matte earthy dark mode */
 .app.dark{color-scheme:dark}.app.dark .sidebar{color:#eee0c7}.app.dark .navtitle,.app.dark .navsearch{color:#eee0c7}.app.dark .workspaceicon{background:#b58c61;color:#28271e}.app.dark .navitem.chosen,.app.dark .navsearch.chosen{background:#5b5c44}.app.dark .primary{background:#667252;color:#f6ebd8}.app.dark .block-todo input[type=checkbox]{accent-color:#7d8964}.app.dark .column{background:#554e3d}.app.dark .block-code .blockinput{background:#514b3a}
+
+/* Customizable MySpace pages and advanced blocks */
+.my-wide{max-width:none!important;width:100%!important}
+.my-page-settings{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin:0 0 28px;font-size:12px;color:var(--muted)}
+.my-page-settings label{display:flex;align-items:center;gap:7px}
+.my-page-settings select,.my-page-settings button,.my-block-controls select,.my-link button,.my-picker button,.my-table button,.my-calendar button{background:var(--side);border:1px solid var(--border);border-radius:7px;color:var(--fg);padding:6px 9px;cursor:pointer}
+.my-page-settings input{accent-color:#7d8964}
+.my-block-controls{display:flex;gap:6px;align-items:center;opacity:.55;flex-wrap:wrap;font-size:11px;margin:4px 0}
+.block:hover .my-block-controls,.my-block:focus-within .my-block-controls{opacity:1}
+.my-block-controls select{max-width:125px;padding:3px}
+.my-block-controls label{display:flex;align-items:center;gap:4px}
+.my-block-controls input[type=color]{height:19px;width:23px;padding:0;border:0;background:none;cursor:pointer}
+.my-toggle,.my-link,.my-media,.my-table,.my-calendar{width:100%;display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:9px;border:1px solid var(--border);background:var(--card);margin:6px 0}
+.my-toggle>button{text-align:left;background:none;border:0;color:var(--fg);font-weight:600;cursor:pointer}
+.my-toggle input,.my-toggle textarea,.my-link input,.my-media input,.my-table input,.my-calendar input{width:100%;background:transparent;color:var(--fg);border:1px solid var(--border);border-radius:5px;padding:8px;outline:none}
+.my-toggle textarea{min-height:100px;resize:vertical}
+.my-link{align-items:flex-start}
+.my-link input{width:100%}
+.my-linked-card{width:100%;padding:18px!important;text-align:left!important;font-size:15px;border:1px solid var(--border)!important;background:var(--side)!important;border-radius:10px!important;color:var(--fg)!important}
+.my-picker{max-height:180px;overflow:auto;display:flex;flex-wrap:wrap;gap:5px}
+.my-table{overflow-x:auto}
+.my-table table{border-collapse:collapse;width:100%}
+.my-table td{border:1px solid var(--border);min-width:100px;padding:3px}
+.my-table td input{border:0}
+.my-calendar input[type=month],.my-calendar input[type=date]{max-width:220px}
+.my-media iframe{background:#fff;border-radius:8px}
