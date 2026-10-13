@@ -53,3 +53,67 @@
 .my-page-settings select{background:#faf9f6;color:#453e37}
 @media(max-width:900px){.my-dashboard-editor{grid-template-columns:repeat(2,minmax(0,1fr))}.my-dashboard-editor>.my-grid-block{grid-column:span 1!important}}
 @media(max-width:650px){.my-dashboard-editor{grid-template-columns:minmax(0,1fr)}}
+
+/* MySpace AllMyNotes-inspired continuous page editor */
+.ms-app{--paper:#faf9f6;--side:#eee9e1;--ink:#453e37;--muted:#91877b;--line:#ddd7ce;min-height:100vh;background:#e9e6e0;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
+.ms-app *{box-sizing:border-box}
+.ms-shell{display:flex;min-height:100vh}
+.ms-side{width:258px;flex:0 0 258px;height:100vh;position:sticky;top:0;display:flex;flex-direction:column;background:#eee9e1;border-right:1px solid #ddd7ce;padding:18px 12px;z-index:10}
+.ms-brand{display:flex;align-items:center;gap:10px;padding:8px 10px 23px;font-family:Georgia,serif;font-size:23px}
+.ms-brand span{font-size:29px;color:#8c967f}
+.ms-brand .ms-icon{margin-left:auto}
+.ms-icon{border:0;background:transparent;color:#86796c;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:6px;border-radius:7px}
+.ms-icon:hover,.ms-nav:hover,.ms-search-result:hover{background:#e8ddd5}
+.ms-search{display:flex;align-items:center;gap:8px;background:#f6f1eb;border:1px solid #e1d9cf;border-radius:9px;padding:9px 11px;color:#92877b}
+.ms-search input{background:none;border:0;outline:none;width:100%;min-width:0;color:#453e37;font-size:13px}
+.ms-section{display:flex;justify-content:space-between;align-items:center;margin:26px 8px 8px;font-size:10px;letter-spacing:1.2px;font-weight:700;color:#948679}
+.ms-side nav{flex:1;overflow:auto}
+.ms-nav{display:flex;align-items:center;min-height:36px;gap:2px;border-radius:8px}
+.ms-nav.selected{background:#e2d7c9}
+.ms-nav-title{flex:1;display:flex;align-items:center;gap:8px;text-align:left;min-width:0;background:transparent;border:0;color:#453e37;font-size:13px;cursor:pointer}
+.ms-nav-title span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.ms-search-result{display:block;width:100%;text-align:left;padding:9px;border:0;border-radius:8px;background:none;color:#453e37}
+.ms-new{display:flex;align-items:center;gap:9px;padding:11px;background:#dcded5;color:#453e37;border:0;border-radius:10px;cursor:pointer;text-align:left}
+.ms-main{min-width:0;flex:1}
+.ms-top{height:59px;background:#faf9f6;display:flex;align-items:center;gap:14px;padding:0 24px;border-bottom:1px solid #e3dcd4;font-size:13px}
+.ms-top-right{margin-left:auto;display:flex;align-items:center;gap:10px;position:relative}
+.ms-saved{color:#9b9086;font-size:11px}
+.ms-menu{position:absolute;right:0;top:36px;background:#faf9f6;border:1px solid #ddd7ce;border-radius:10px;box-shadow:0 8px 30px #0002;padding:6px;min-width:190px;z-index:20}
+.ms-menu button{display:flex;align-items:center;gap:8px;padding:9px;width:100%;background:none;border:0;text-align:left;color:#453e37;cursor:pointer}
+.ms-menu button:hover{background:#eee9e1}
+.ms-toolbar{display:flex;align-items:center;gap:3px;flex-wrap:wrap;padding:10px 20px;background:#f3eee8;border-bottom:1px solid #ddd7ce;position:sticky;top:0;z-index:5}
+.ms-toolbar button,.ms-toolbar select{background:transparent;border:0;color:#51473e;padding:7px 9px;border-radius:6px;cursor:pointer;font-size:13px}
+.ms-toolbar button:hover,.ms-toolbar select:hover{background:#e6dcd0}
+.ms-toolbar label{display:flex;align-items:center;gap:3px;padding:4px 8px;font-weight:bold}
+.ms-toolbar input[type=color]{width:22px;height:22px;padding:0;border:0;background:none;cursor:pointer}
+.ms-sep{height:22px;border-left:1px solid #d9d0c5;margin:0 5px}
+.ms-paper{max-width:900px;min-height:calc(100vh - 200px);margin:28px auto 40px;padding:35px clamp(24px,6vw,90px) 90px;border:1px solid #e1dad1;border-radius:15px;box-shadow:0 7px 30px #4b403008}
+.ms-paper.ms-wide{max-width:calc(100% - 48px)}
+.ms-page-options{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:11px;color:#918477}
+.ms-page-options>span{letter-spacing:1px;font-size:10px;margin-right:auto}
+.ms-page-options label{display:flex;align-items:center;gap:5px}
+.ms-page-options select,.ms-page-options button{border:1px solid #e2d8ce;background:#f4efe8;color:#594c40;padding:6px 9px;border-radius:7px;cursor:pointer}
+.ms-page-options button{display:flex;align-items:center;gap:6px}
+.ms-page-options input{accent-color:#87917b}
+.ms-hero{margin:44px 0 24px}
+.ms-page-icon{font-size:42px;border:0;background:none;cursor:pointer;padding:0}
+.ms-title{display:block;font-family:Georgia,serif;font-size:clamp(30px,4vw,44px);font-weight:600;width:100%;background:none;color:#3f3931;border:0;outline:none;margin-top:10px}
+.ms-editor{outline:none;min-height:350px;font-size:16px;line-height:1.85;color:#453e37;overflow-wrap:anywhere}
+.ms-editor p{margin:0 0 13px}
+.ms-editor h1,.ms-editor h2,.ms-editor h3{font-family:Georgia,serif;line-height:1.35;margin:22px 0 12px}
+.ms-editor h1{font-size:30px}.ms-editor h2{font-size:24px}.ms-editor h3{font-size:19px}
+.ms-editor blockquote{border-left:3px solid #b8a898;margin:14px 0;padding:8px 18px;background:#eee9e188}
+.ms-editor a{color:#87705c;text-decoration:underline}
+.ms-editor img{max-width:100%;height:auto;border-radius:10px}
+.ms-editor table{border-collapse:collapse;width:100%;margin:18px 0}
+.ms-editor td,.ms-editor th{border:1px solid #d3c8bb;min-width:70px;padding:7px 10px}
+.ms-editor details{background:#eee9e1;border-radius:9px;padding:10px 14px;margin:12px 0}
+.ms-editor summary{cursor:pointer;font-weight:600}
+.ms-editor input[type=checkbox]{accent-color:#8b9880}
+.ms-subpages{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:36px}
+.ms-subpages button{display:flex;align-items:center;gap:9px;text-align:left;border:1px solid #ded4c9;background:#eee9e1;border-radius:9px;padding:15px;color:#453e37;cursor:pointer}
+.ms-subpages button svg{margin-left:auto}
+.ms-footer{text-align:center;color:#a59b91;font-size:11px;padding:0 20px 24px}
+.ms-link-picker{position:fixed;right:30px;top:120px;width:280px;max-height:340px;overflow:auto;z-index:30;background:#faf9f6;border:1px solid #d8cdc1;box-shadow:0 12px 40px #0002;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.ms-link-picker button{background:#f0e9e0;border:0;padding:9px;text-align:left;color:#453e37;border-radius:6px;cursor:pointer}
+@media(max-width:700px){.ms-side{position:fixed;box-shadow:10px 0 30px #0002}.ms-paper{margin:12px;padding:20px;min-height:80vh}.ms-paper.ms-wide{max-width:none}.ms-toolbar{padding:8px}.ms-saved{display:none}}
