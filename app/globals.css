@@ -93,3 +93,12 @@
 .ms-editor .ms-task-widget{background:#f4e9e7}
 .ms-editor .ms-task-widget p{padding:6px 10px;margin:4px 0;background:#fff9f780;border-radius:6px}
 .ms-editor .ms-pdf-link{display:inline-flex;align-items:center;gap:6px;padding:10px 14px;border:1px solid #ded4c9;background:#f1eae3;border-radius:9px;text-decoration:none;color:#6c5142}
+
+/* Adjustable and movable page content */
+.ms-editor .ms-widget,.ms-editor .ms-dashboard-columns,.ms-editor .ms-gallery-table,.ms-editor .ms-calendar-table,.ms-editor details,.ms-editor img{max-width:100%;resize:horizontal;overflow:auto}
+.ms-editor .ms-widget:hover,.ms-editor .ms-dashboard-columns:hover,.ms-editor .ms-gallery-table:hover,.ms-editor .ms-calendar-table:hover,.ms-editor details:hover,.ms-editor img:hover{outline:1px dashed #b9ad9e;outline-offset:4px}
+.ms-editor img{display:inline-block;min-width:60px;cursor:grab}
+.ms-editor .ms-widget,.ms-editor .ms-dashboard-columns{min-width:220px}
+.ms-editor [draggable=true]{cursor:grab}
+.ms-toolbar button[title*="selected content"]{background:#ebe4d9;border:1px solid #dcd2c6;border-radius:7px}
+@media(max-width:650px){.ms-editor .ms-widget,.ms-editor .ms-dashboard-columns{min-width:0}}
