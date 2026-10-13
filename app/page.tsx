@@ -10,7 +10,7 @@ const statuses=['Not started','In progress','Done'];const priorities=['Low','Med
 const blockOptions:Block['type'][]=['text','h1','h2','bullet','todo','quote','code'];
 const labels:Record<Block['type'],string>={text:'Text',h1:'Heading 1',h2:'Heading 2',bullet:'Bulleted list',todo:'To-do',quote:'Quote',code:'Code'};
 export default function App(){
- const [pages,setPages]=useState<Page[]>(starter);const [active,setActive]=useState('home');const [ready,setReady]=useState(false);const [dark,setDark]=useState(false);const [sidebar,setSidebar]=useState(true);const [search,setSearch]=useState('');const [expanded,setExpanded]=useState<string[]>(['home','notes','projects']);const [showMenu,setShowMenu]=useState(false);
+ const [pages,setPages]=useState<Page[]>(starter);const [active,setActive]=useState('home');const [ready,setReady]=useState(false);const [dark,setDark]=useState(true);const [sidebar,setSidebar]=useState(true);const [search,setSearch]=useState('');const [expanded,setExpanded]=useState<string[]>(['home','notes','projects']);const [showMenu,setShowMenu]=useState(false);
  useEffect(()=>{try{const s=localStorage.getItem('myspace-v1');if(s){const v=JSON.parse(s);if(Array.isArray(v.pages)&&v.pages.length){setPages(v.pages);setActive(v.active||v.pages[0].id);setDark(!!v.dark)}}}catch{}setReady(true)},[]);
  useEffect(()=>{if(ready)localStorage.setItem('myspace-v1',JSON.stringify({pages,active,dark}))},[pages,active,dark,ready]);
  const page=pages.find(p=>p.id===active);const update=(id:string,patch:Partial<Page>)=>setPages(p=>p.map(x=>x.id===id?{...x,...patch}:x));
