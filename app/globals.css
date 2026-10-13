@@ -62,3 +62,21 @@
 .ms-link-picker{position:fixed;right:30px;top:120px;width:280px;max-height:340px;overflow:auto;z-index:30;background:#faf9f6;border:1px solid #d8cdc1;box-shadow:0 12px 40px #0002;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px}
 .ms-link-picker button{background:#f0e9e0;border:0;padding:9px;text-align:left;color:#453e37;border-radius:6px;cursor:pointer}
 @media(max-width:700px){.ms-side{position:fixed;box-shadow:10px 0 30px #0002}.ms-paper{margin:12px;padding:20px;min-height:80vh}.ms-paper.ms-wide{max-width:none}.ms-toolbar{padding:8px}.ms-saved{display:none}}
+
+/* Editable personal-dashboard page template */
+.ms-editor .ms-dashboard-columns{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:16px;margin:12px -16px 36px}
+.ms-editor .ms-dashboard-columns>tbody>tr>td{border:0;vertical-align:top;padding:4px 6px}
+.ms-editor .ms-dashboard-columns>tbody>tr>td:first-child{width:49%}
+.ms-editor .ms-dashboard-tasks h3{background:#f1e8e5;padding:10px 14px;border-radius:8px;font-size:17px}
+.ms-editor .ms-dashboard-tasks p{padding:7px 12px;margin:5px 0;background:#f6eeeb;border-radius:6px}
+.ms-editor .ms-dashboard-gallery h3{background:#f3f1ef;border-radius:18px;padding:8px 15px;display:inline-block;font-size:17px}
+.ms-editor .ms-gallery-table{table-layout:fixed;width:100%;border-spacing:10px;border-collapse:separate}
+.ms-editor .ms-gallery-table td{border:1px solid #e2dbd4;border-radius:12px;padding:0 0 12px;overflow:hidden;vertical-align:top;background:#fff;font-size:13px}
+.ms-editor .ms-gallery-table td p{padding:7px 10px;margin:0}
+.ms-editor .ms-gallery-photo{background:#e8ddd5;min-height:115px;display:flex;align-items:center;justify-content:center;text-align:center;color:#8e8075;font-size:12px}
+.ms-editor .ms-gallery-table img{display:block;width:100%;height:140px;object-fit:cover;border-radius:0}
+.ms-editor .ms-calendar-table{table-layout:fixed;width:100%;border-collapse:collapse}
+.ms-editor .ms-calendar-table th{font-size:12px;color:#94877b;background:#f3eee8}
+.ms-editor .ms-calendar-table td{height:110px;vertical-align:top;font-size:12px}
+.ms-editor .ms-calendar-table td strong{display:block;text-align:right}
+@media(max-width:750px){.ms-editor .ms-dashboard-columns,.ms-editor .ms-dashboard-columns>tbody,.ms-editor .ms-dashboard-columns>tbody>tr,.ms-editor .ms-dashboard-columns>tbody>tr>td{display:block;width:100%!important}.ms-editor .ms-dashboard-columns{margin:0}.ms-editor .ms-calendar-table td{height:65px}}
