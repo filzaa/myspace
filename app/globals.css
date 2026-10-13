@@ -80,3 +80,16 @@
 .ms-editor .ms-calendar-table td{height:110px;vertical-align:top;font-size:12px}
 .ms-editor .ms-calendar-table td strong{display:block;text-align:right}
 @media(max-width:750px){.ms-editor .ms-dashboard-columns,.ms-editor .ms-dashboard-columns>tbody,.ms-editor .ms-dashboard-columns>tbody>tr,.ms-editor .ms-dashboard-columns>tbody>tr>td{display:block;width:100%!important}.ms-editor .ms-dashboard-columns{margin:0}.ms-editor .ms-calendar-table td{height:65px}}
+
+/* Toolbar insert menu and editable embedded widgets */
+.ms-insert-holder{position:relative;display:flex;align-items:center}
+.ms-toolbar .ms-add-button{display:inline-flex;align-items:center;gap:7px;background:#dcded5;border:1px solid #cdd0c4;border-radius:8px;font-weight:650;padding:8px 12px;white-space:nowrap}
+.ms-toolbar .ms-add-button:hover{background:#cdd2c4}
+.ms-insert-menu{position:absolute;top:calc(100% + 9px);left:0;width:215px;background:#faf9f6;border:1px solid #ddd7ce;border-radius:11px;padding:7px;box-shadow:0 12px 30px #453e3726;z-index:25}
+.ms-toolbar .ms-insert-menu button{display:block;text-align:left;width:100%;padding:11px 12px;color:#453e37;font-size:13px;border-radius:7px}
+.ms-toolbar .ms-insert-menu button:hover{background:#eee9e1}
+.ms-editor .ms-widget{padding:17px 20px;margin:16px 0;border:1px solid #e5dad2;border-radius:12px;background:#f5f0ea}
+.ms-editor .ms-widget h3{margin:0 0 13px;font-size:18px}
+.ms-editor .ms-task-widget{background:#f4e9e7}
+.ms-editor .ms-task-widget p{padding:6px 10px;margin:4px 0;background:#fff9f780;border-radius:6px}
+.ms-editor .ms-pdf-link{display:inline-flex;align-items:center;gap:6px;padding:10px 14px;border:1px solid #ded4c9;background:#f1eae3;border-radius:9px;text-decoration:none;color:#6c5142}
