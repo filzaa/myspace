@@ -35,7 +35,7 @@ export default function MySpace(){
  const dragStartContent=(e:React.DragEvent<HTMLDivElement>)=>{const el=(e.target as Element).closest('.ms-widget, .ms-dashboard-columns, .ms-gallery-table, .ms-calendar-table, img, details, table');if(el&&editor.current?.contains(el)){dragged.current=el as HTMLElement;e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain','myspace-move')}};
  const dropContent=(e:React.DragEvent<HTMLDivElement>)=>{if(e.dataTransfer.files.length)return;const source=dragged.current;if(!source||!editor.current?.contains(source))return;const dest=(e.target as Element).closest('.ms-widget, .ms-dashboard-columns, .ms-gallery-table, .ms-calendar-table, img, details, table');if(!dest||dest===source||source.contains(dest)||dest.contains(source))return;e.preventDefault();const rect=dest.getBoundingClientRect();if(e.clientY<rect.top+rect.height/2)dest.before(source);else dest.after(source);chosen.current=source;dragged.current=null;save()};
  const onEditorEnter=(e:React.KeyboardEvent<HTMLDivElement>)=>{
- if(e.key!=='Enter'||e.shiftKey||e.isComposing)return;
+ if(e.key!=='Enter'||e.shiftKey||e.nativeEvent.isComposing)return;
  const sel=window.getSelection(),node=sel?.anchorNode,element=node instanceof Element?node:node?.parentElement;
  if(!element||!editor.current?.contains(element))return;
  const summary=element.closest('summary');
