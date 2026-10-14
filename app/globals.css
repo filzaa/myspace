@@ -128,3 +128,10 @@
 .ms-backlinks button{border:1px solid #ddd4c9;border-radius:7px;padding:6px 9px;background:#f4eee7}
 .ms-editor .ms-wiki{color:#765d7d;background:#f2e9f2;border-radius:4px;padding:1px 3px}
 @media(max-width:700px){.ms-editor .ms-columns,.ms-editor .ms-columns-3,.ms-editor .ms-columns-4{grid-template-columns:1fr}.ms-cover{height:120px}}
+
+/* Visible controls for selected editable content */
+.ms-selection-controls{position:fixed;display:flex;align-items:center;gap:4px;padding:4px;border:1px solid #d1c5b7;border-radius:9px;background:#fffaf5;box-shadow:0 5px 20px #453e3730;z-index:999}
+.ms-selection-controls button{touch-action:none;user-select:none;cursor:grab;border:0;border-radius:6px;padding:7px 10px;background:#eee9e1;color:#453e37;font-size:12px;font-weight:600}
+.ms-selection-controls button:hover{background:#ded5c9}
+.ms-selection-controls button:active{cursor:grabbing}
+.ms-editor>*:hover{outline-offset:2px}
